@@ -1,0 +1,38 @@
+[
+	{
+		"id": 1,
+		"image": "./images/dracula.png"
+	},
+	{
+		"id": 2,
+		"image": "./images/franky.png"
+	},
+	{
+		"id": 3,
+		"image": "./images/imhotep.png"
+	},
+	{
+		"id": 4,
+		"image": "./images/blacklagoon.png"
+	},
+	{
+		"id": 5,
+		"image": "./images/hunchback.png"
+	},
+	{
+		"id": 6,
+		"image": "./images/invisibleman.png"
+	},
+	{
+		"id": 7,
+		"image": "./images/msfranky.png"
+	},
+	{
+		"id": 8,
+		"image": "./images/phantom.png"
+	},
+	{
+		"id": 9,
+		"image": "./images/wolfman.png"
+	}
+]
