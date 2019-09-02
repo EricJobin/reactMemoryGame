@@ -1,38 +1,47 @@
 [
 	{
 		"id": 1,
+		"alt": "Something is Amiss",
 		"image": "./images/dracula.png"
 	},
 	{
 		"id": 2,
+		"alt": "Something is Amiss",
 		"image": "./images/franky.png"
 	},
 	{
 		"id": 3,
+		"alt": "Something is Amiss",
 		"image": "./images/imhotep.png"
 	},
 	{
 		"id": 4,
+		"alt": "Something is Amiss",
 		"image": "./images/blacklagoon.png"
 	},
 	{
 		"id": 5,
+		"alt": "Something is Amiss",
 		"image": "./images/hunchback.png"
 	},
 	{
 		"id": 6,
+		"alt": "Something is Amiss",
 		"image": "./images/invisibleman.png"
 	},
 	{
 		"id": 7,
+		"alt": "Something is Amiss",
 		"image": "./images/msfranky.png"
 	},
 	{
 		"id": 8,
+		"alt": "Something is Amiss",
 		"image": "./images/phantom.png"
 	},
 	{
 		"id": 9,
+		"alt": "Something is Amiss",
 		"image": "./images/wolfman.png"
 	}
 ]
