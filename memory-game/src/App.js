@@ -1,13 +1,29 @@
-import React, { Component } from "react";
+import React, { Component } from "react"; // remove  {Component} with update to line 6
 import Wrapper from "./components/Wrapper";
 import mem from "./mem.json"
 import MemCard from "./components/MemCard";
 
-class App extends Component {
+class App extends Component { //Change to React.Component
 	state = {
 		chosen: [],
 		score: 0,
+		cardOrder: [1,2,3,4,0,5,6,7,8]
 	};
+
+	cardShuffle = () =>{
+		// console.log("Shuffling Cards")
+
+		const newOrder =[];
+		for (let i = 0; i<9;){
+			let ranNum = Math.floor(Math.random() *9)
+			if(newOrder.includes(ranNum)){}
+			else{
+				newOrder.push(ranNum);
+				i++;
+			}
+		}
+		this.setState({cardOrder: newOrder})
+	}
 
 	cardClick = (id) =>{
 		console.log(id);
@@ -27,10 +43,12 @@ class App extends Component {
 			this.setState({chosen: []});
 		}
 		// Call a function to shuffle cards here
+		this.cardShuffle()
 	}
 
 	render() {
-		let cards = [1,2,3,4,0,5,6,7,8]
+		// this.cardShuffle()
+		let cards = this.state.cardOrder
 		return (
 			<Wrapper>
 			
