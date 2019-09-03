@@ -1,47 +1,47 @@
 [
 	{
 		"id": 1,
-		"alt": "Something is Amiss",
+		"alt": "Dracula",
 		"image": "./images/dracula.png"
 	},
 	{
 		"id": 2,
-		"alt": "Something is Amiss",
+		"alt": "Frankenstein",
 		"image": "./images/franky.png"
 	},
 	{
 		"id": 3,
-		"alt": "Something is Amiss",
+		"alt": "The Mummy",
 		"image": "./images/imhotep.png"
 	},
 	{
 		"id": 4,
-		"alt": "Something is Amiss",
+		"alt": "The Creature from the Black Lagoon",
 		"image": "./images/blacklagoon.png"
 	},
 	{
 		"id": 5,
-		"alt": "Something is Amiss",
+		"alt": "The Hunchback",
 		"image": "./images/hunchback.png"
 	},
 	{
 		"id": 6,
-		"alt": "Something is Amiss",
+		"alt": "The Invisible Man",
 		"image": "./images/invisibleman.png"
 	},
 	{
 		"id": 7,
-		"alt": "Something is Amiss",
+		"alt": "Bride of Frankenstein",
 		"image": "./images/msfranky.png"
 	},
 	{
 		"id": 8,
-		"alt": "Something is Amiss",
+		"alt": "The Phantom",
 		"image": "./images/phantom.png"
 	},
 	{
 		"id": 9,
-		"alt": "Something is Amiss",
+		"alt": "A Big Hairy Dude",
 		"image": "./images/wolfman.png"
 	}
 ]

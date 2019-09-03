@@ -13,10 +13,8 @@ class App extends Component {
 		console.log(id);
 		if(this.state.chosen.includes(id)){
 			console.log("Already Clicked, You lose!");
-			this.state.chosen=[]; // Line 16:  Do not mutate state directly. Use setState()
-			// this.state.chosen.setState([]); // setState is not a function
-			
-			console.log(this.state.chosen)
+			this.setState({chosen: []});
+			// console.log(this.state.chosen)
 		}
 		else {
 			console.log("Good Choice!");
@@ -24,31 +22,19 @@ class App extends Component {
 			// console.log(this.state.chosen);
 			// console.log(this.state.chosen.length);
 		}
-		if(this.state.chosen.length == 9){
+		if(this.state.chosen.length === 9){
 			console.log("Good Job, you've clicked them all!!!")
-			this.state.chosen=[];
+			this.setState({chosen: []});
 		}
-
-
-
-
-
+		// Call a function to shuffle cards here
 	}
 
 	render() {
 		return (
 			<Wrapper>
-				{/* {console.log(this)} */}
+			
 				{mem.map(
-					
 
-					// <MemCard
-					// 	id={mem.id}
-					// 	alt={mem.alt}
-					// 	image={mem.image}
-					// 	// cardClick={this.cardClick}
-					// />
-					// console.log(App.cardClick),
 					(f, i) => (<MemCard 
 						{...f} // Breaks out mem data for rendering each card
 						key={i} // Gives each card a react key i
