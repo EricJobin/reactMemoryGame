@@ -30,17 +30,33 @@ class App extends Component {
 	}
 
 	render() {
+		let cards = [1,2,3,4,0,5,6,7,8]
 		return (
 			<Wrapper>
 			
-				{mem.map(
+				{/* {mem.map(
 
-					(f, i) => (<MemCard 
-						{...f} // Breaks out mem data for rendering each card
+					(mem, i) => (<MemCard 
+						{...mem} // Breaks out mem data for rendering each card
+						key={i} // Gives each card a react key i
+						cardClick={this.cardClick} // This is where the click function gets passed in
+						/>)
+				)} */}
+
+				
+				{/* Ok, this function will map out cards in whatever order the cards array shows, based on index */}
+				{cards.map(
+
+					(cards, i) => (<MemCard 
+						{...mem[cards]} // Breaks out mem data for rendering each card
 						key={i} // Gives each card a react key i
 						cardClick={this.cardClick} // This is where the click function gets passed in
 						/>)
 				)}
+
+
+
+
 			</Wrapper>
 		);
 	}
