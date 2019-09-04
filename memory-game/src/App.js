@@ -1,18 +1,18 @@
-import React, { Component } from "react"; // remove  {Component} with update to line 6
+import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
 import mem from "./mem.json"
 import MemCard from "./components/MemCard";
+import Scoreboard from "./components/Scoreboard";
 
-class App extends Component { //Change to React.Component
+class App extends Component {
 	state = {
 		chosen: [],
 		score: 0,
-		cardOrder: [1,2,3,4,0,5,6,7,8]
+		cardOrder: [1,2,3,4,0,5,6,7,8],
+		gameState: ""
 	};
 
 	cardShuffle = () =>{
-		// console.log("Shuffling Cards")
-
 		const newOrder =[];
 		for (let i = 0; i<9;){
 			let ranNum = Math.floor(Math.random() *9)
@@ -26,55 +26,41 @@ class App extends Component { //Change to React.Component
 	}
 
 	cardClick = (id) =>{
-		console.log(id);
 		if(this.state.chosen.includes(id)){
-			console.log("Already Clicked, You lose!");
 			this.setState({chosen: []});
-			// console.log(this.state.chosen)
+			this.setState({gameState: "Already Clicked, You lose! Try Again?"});
+			this.setState({score: 0});
 		}
 		else {
-			console.log("Good Choice!");
+			this.setState({gameState: "Good Choice!"});
 			this.state.chosen.push(id);
-			// console.log(this.state.chosen);
-			// console.log(this.state.chosen.length);
+			this.setState({score: this.state.chosen.length});
 		}
 		if(this.state.chosen.length === 9){
-			console.log("Good Job, you've clicked them all!!!")
 			this.setState({chosen: []});
+			this.setState({gameState: "Congratulations! You've got them all! Play Again?"});
+			this.setState({score: 0});
 		}
-		// Call a function to shuffle cards here
 		this.cardShuffle()
 	}
 
 	render() {
-		// this.cardShuffle()
 		let cards = this.state.cardOrder
 		return (
 			<Wrapper>
-			
-				{/* {mem.map(
-
-					(mem, i) => (<MemCard 
-						{...mem} // Breaks out mem data for rendering each card
-						key={i} // Gives each card a react key i
-						cardClick={this.cardClick} // This is where the click function gets passed in
-						/>)
-				)} */}
-
-				
+				<Scoreboard
+					score={this.state.score}
+					gameState={this.state.gameState}
+				/>
+							
 				{/* Ok, this function will map out cards in whatever order the cards array shows, based on index */}
 				{cards.map(
-
 					(cards, i) => (<MemCard 
 						{...mem[cards]} // Breaks out mem data for rendering each card
 						key={i} // Gives each card a react key i
 						cardClick={this.cardClick} // This is where the click function gets passed in
 						/>)
 				)}
-
-
-
-
 			</Wrapper>
 		);
 	}
